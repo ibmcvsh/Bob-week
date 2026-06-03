@@ -1,0 +1,37 @@
+{
+    "mcpServers": {
+        "baw-admin": {
+           "command": "npx",
+            "args": [
+                "-y",
+                "github:MalekJabri/baw-admin-mcp-server-standalone",
+                "baw-admin-mcp-server"
+            ],
+            "env": {
+                "BAW_BASE_URL": "{YOUR BAW URL}/bas/ops",
+                "BAW_USERNAME": "YOUR USERNAME",
+                "BAW_PASSWORD": "YOUR PASSWORD",
+                 "BAW_REJECT_UNAUTHORIZED": "false"
+            },
+            "alwaysAllow": [
+                "get_install_status",
+                "login"
+            ]
+        },
+        "baw-services": {
+            "command": "uvx",
+            "args": [
+                "--from",
+                "git+https://github.com/ibmbpm/ibm-baw-mcp-server.git",
+                "ibm-baw-mcp-server"
+            ],
+            "env": {
+                "ENDPOINT": "{YOUR BAW URL}/bas",
+                "USERID": "YOUR USERNAME",
+                "PASSWORD": "YOUR PASSWORD",
+                "VERIFY_SSL": "false",
+                "LOG_LEVEL": "DEBUG"
+            }
+        }
+    }
+}

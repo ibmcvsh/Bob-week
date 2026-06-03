@@ -1,0 +1,46 @@
+{
+  "type": "businessObject",
+  "name": "TaskData",
+  "namespace": "com.ibm.baw.widgets",
+  "description": "Business object for task card data with priority and status tracking",
+  "properties": [
+    {
+      "name": "title",
+      "type": "String",
+      "required": true,
+      "description": "Task title"
+    },
+    {
+      "name": "description",
+      "type": "String",
+      "required": false,
+      "description": "Detailed task description"
+    },
+    {
+      "name": "assignee",
+      "type": "String",
+      "required": false,
+      "description": "Person assigned to the task"
+    },
+    {
+      "name": "dueDate",
+      "type": "String",
+      "required": false,
+      "description": "Task due date"
+    },
+    {
+      "name": "priority",
+      "type": "String",
+      "required": false,
+      "default": "Medium",
+      "description": "Task priority level (Low, Medium, High)"
+    },
+    {
+      "name": "status",
+      "type": "String",
+      "required": false,
+      "default": "Not Started",
+      "description": "Current task status (Not Started, In Progress, Completed, On Hold, Cancelled)"
+    }
+  ]
+}
