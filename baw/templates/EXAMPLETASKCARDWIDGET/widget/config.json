@@ -1,0 +1,54 @@
+{
+  "name": "TaskCard",
+  "displayName": "Task Card",
+  "category": "Project Management",
+  "description": "Display task information with status and priority indicators",
+  "version": "1.0.0",
+  "author": "BAW Bobathon",
+  "bindingType": {
+    "name": "TaskData",
+    "type": "TaskData"
+  },
+  "configOptions": [
+    {
+      "name": "showAssignee",
+      "type": "Boolean",
+      "label": "Show Assignee",
+      "description": "Display assignee information",
+      "default": true
+    },
+    {
+      "name": "showDueDate",
+      "type": "Boolean",
+      "label": "Show Due Date",
+      "description": "Display due date information",
+      "default": true
+    },
+    {
+      "name": "compactMode",
+      "type": "Boolean",
+      "label": "Compact Mode",
+      "description": "Use compact display mode",
+      "default": false
+    },
+    {
+      "name": "editable",
+      "type": "Boolean",
+      "label": "Editable",
+      "description": "Allow editing of task fields",
+      "default": false
+    }
+  ],
+  "events": [
+    {
+      "name": "taskClicked",
+      "label": "Task Clicked",
+      "description": "Fired when the task card is clicked"
+    },
+    {
+      "name": "taskUpdated",
+      "label": "Task Updated",
+      "description": "Fired when task data is modified"
+    }
+  ]
+}
