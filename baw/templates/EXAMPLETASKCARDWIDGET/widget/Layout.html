@@ -1,0 +1,53 @@
+<div class="task-card" data-eventid="taskClicked" role="button" tabindex="0" aria-label="Task card">
+  <!-- Header Section -->
+  <div class="task-card-header">
+    <h3 class="task-title" data-binding="taskData.title" data-display-mode>Task Title</h3>
+    <input type="text" class="task-title-input" data-binding="taskData.title" data-edit-mode placeholder="Task Title" aria-label="Task title" />
+    
+    <div class="priority-section">
+      <span class="priority-badge" data-binding="taskData.priority" data-priority-level="taskData.priority" data-display-mode>
+        <span data-binding="taskData.priority">Medium</span>
+      </span>
+      <select class="priority-select" data-binding="taskData.priority" data-edit-mode aria-label="Priority">
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Body Section -->
+  <div class="task-card-body">
+    <p class="task-description" data-binding="taskData.description" data-display-mode>Task description goes here</p>
+    <textarea class="task-description-input" data-binding="taskData.description" data-edit-mode placeholder="Task description" aria-label="Task description"></textarea>
+    
+    <!-- Metadata Section -->
+    <div class="task-metadata">
+      <div class="metadata-item" data-show-if="config.showAssignee">
+        <span class="metadata-label">Assigned to:</span>
+        <span class="metadata-value" data-binding="taskData.assignee" data-display-mode>Unassigned</span>
+        <input type="text" class="metadata-input" data-binding="taskData.assignee" data-edit-mode placeholder="Assignee" aria-label="Assignee" />
+      </div>
+      
+      <div class="metadata-item" data-show-if="config.showDueDate">
+        <span class="metadata-label">Due:</span>
+        <span class="metadata-value" data-binding="taskData.dueDate" data-display-mode>No due date</span>
+        <input type="date" class="metadata-input" data-binding="taskData.dueDate" data-edit-mode aria-label="Due date" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <div class="task-card-footer">
+    <span class="status-badge" data-binding="taskData.status" data-status-type="taskData.status" data-display-mode>
+      <span data-binding="taskData.status">Not Started</span>
+    </span>
+    <select class="status-select" data-binding="taskData.status" data-edit-mode aria-label="Status">
+      <option value="Not Started">Not Started</option>
+      <option value="In Progress">In Progress</option>
+      <option value="Completed">Completed</option>
+      <option value="On Hold">On Hold</option>
+      <option value="Cancelled">Cancelled</option>
+    </select>
+  </div>
+</div>

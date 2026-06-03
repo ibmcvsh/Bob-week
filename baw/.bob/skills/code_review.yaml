@@ -1,0 +1,37 @@
+---
+name: security-review
+description: Review code for security vulnerabilities and best practices
+---
+
+Perform a security-focused code review:
+
+<Steps>
+<Step>
+Check for common vulnerabilities:
+- SQL injection risks
+- XSS vulnerabilities
+- Authentication/authorization issues
+- Sensitive data exposure
+
+</Step>
+
+<Step>
+Review security best practices:
+- Input validation
+- Output encoding
+- Secure configuration
+- Error handling
+
+</Step>
+
+<Step>
+Provide findings with:
+- Severity level (Critical, High, Medium, Low)
+- Location in code
+- Recommended fix
+- Reference to security standards
+
+</Step>
+</Steps>
+
+Use the severity guide in `severity-levels.md` for classification.
