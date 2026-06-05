@@ -15,10 +15,10 @@ uv
 ### [Generate test cases for workflows and perform automated testing](../baw/Labs/automated-testing/BAW_Service_Testing_Lab.md)
 
 
-### [Accelerate custom widget development]
+### [Accelerate custom widget development](../baw/Labs/custom-widget-dev/Project_Management_Widgets_Lab.md)
 
 
-### [Automated process definition from business documents]
+### [Automated process definition from business documents](../baw/Labs/process-creation/BAW_Process_Creation_LifeInsurance_Lab_Instructions.md)
 
 
 ### [Refactor/Optimize an existing workflow]
