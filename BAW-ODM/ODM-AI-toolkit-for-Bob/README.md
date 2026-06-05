@@ -84,39 +84,9 @@ Before creating or modifying ODM projects, you need to retrieve the ODM Build Co
 
 **Choose one of the following methods:**
 
-#### Option A: Copy from Local ODM Installation
-
-If you have ODM installed on-premises (e.g., ODM 9.5+):
-
-```bash
-# Create the buildcommand directory structure
-mkdir -p buildcommand/rules-compiler
-
-# Copy the rules compiler from your ODM installation
-cp "$ODM_HOME/buildcommand/rules-compiler/rules-compiler.jar" buildcommand/rules-compiler/
-```
-
-#### Option B: Download via ODM for Developers Docker Image
-
-If you don't have ODM installed locally:
-
-```bash
-# Start ODM container
-docker run -d -e LICENSE=accept -p 9060:9060 -p 9443:9443 -u $(id -u) \
-  --name odm-buildcmd icr.io/cpopen/odm-k8s/odm:latest
-
-# Wait ~60 seconds, then download and extract
-curl http://localhost:9060/decisioncenter/assets/buildcommand.zip --output buildcommand.zip
-unzip -o ../buildcommand.zip -d buildcommand 'rules-compiler/*'
-
-# Verify and cleanup
-ls -lh buildcommand/rules-compiler/rules-compiler.jar
-docker stop odm-buildcmd && docker rm odm-buildcmd
-```
+**Note**: This has been completed for you already. The rules-compiler will automatically be used to validate.
 
 ✅ **Setup Complete!** The `buildcommand/rules-compiler/rules-compiler.jar` is now available in your workspace.
-
-> **Note**: This is a one-time setup per workspace. Once the rules compiler is in place, Bob will automatically use it to validate all generated Decision Services.
 
 ### 3️⃣ Generate Your First Decision Service with Bob
 
