@@ -21,8 +21,6 @@ uv
 ### [Automated process definition from business documents](../baw/Labs/process-creation/BAW_Process_Creation_LifeInsurance_Lab_Instructions.md)
 
 
-### [Refactor/Optimize an existing workflow]
-
 
 ---
 **Contact Info:** Reach out to *Drew.Letvin@ibm.com* if you have any questions.  
