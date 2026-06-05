@@ -12,16 +12,16 @@ uv
 
 ## Labs
 
-### Generate test cases for workflows and perform automated testing
+### [Generate test cases for workflows and perform automated testing](Labs/automated-testing/BAW_Serice_Testing_Lab.md)
 
 
-### Accelerate custom widget development
+### [Accelerate custom widget development]
 
 
-### Automated process definition from business documents
+### [Automated process definition from business documents]
 
 
-### Refactor/Optimize an existing workflow
+### [Refactor/Optimize an existing workflow]
 
 
 ---
