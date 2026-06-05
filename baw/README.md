@@ -12,7 +12,7 @@ uv
 
 ## Labs
 
-### [Generate test cases for workflows and perform automated testing](Labs/automated-testing/BAW_Serice_Testing_Lab.md)
+### [Generate test cases for workflows and perform automated testing](baw/Labs/automated-testing/BAW_Service_Testing_Lab.md)
 
 
 ### [Accelerate custom widget development]
