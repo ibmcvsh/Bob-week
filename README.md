@@ -4,9 +4,6 @@
 
 ### *Hands-On Labs for IBM AI & Automation Technologies*
 
-[![IBM](https://img.shields.io/badge/IBM-0062ff?style=for-the-badge&logo=ibm)](https://www.ibm.com/)
-[![AI Powered](https://img.shields.io/badge/AI-Powered-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](https://www.ibm.com/ai)
-[![Automation](https://img.shields.io/badge/Automation-Ready-00C853?style=for-the-badge&logo=ansible&logoColor=white)](https://www.ibm.com/automation)
 
 *A week-long journey through IBM's cutting-edge AI and automation technologies*
 
