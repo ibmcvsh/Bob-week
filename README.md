@@ -37,11 +37,13 @@ Learn to modernize Java applications and automate deployments with Ansible.
 
 ### 🔄 Day 2 Morning: Bob with Business Automation Workflows + ODM
 
-**Build intelligent process automation**
+**Build intelligent process automation & decision management**
 
-Create automated workflows, custom widgets, and AI-powered process definitions.
+Create automated workflows, custom widgets, AI-powered process definitions, and intelligent business rules.
 
 **[👉 Start BAW Labs](./baw/README.md)**
+
+**[👉 Start ODM Labs](./ODM/README.md)**
 
 ---
 
