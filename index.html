@@ -32,11 +32,23 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Bob -->
     <section id="home" class="hero">
         <div class="hero-background"></div>
+        <div class="particles" id="particles"></div>
         <div class="container">
             <div class="hero-content">
+                <!-- Bob Character -->
+                <div class="bob-image-container">
+                    <img src="IBM-Bob.png"
+                         alt="IBM Bob - Your AI Development Partner"
+                         class="bob-hero-image"
+                         loading="eager">
+                    <div class="bob-greeting">
+                        <p>👋 Hi! I'm Bob, your AI guide</p>
+                    </div>
+                </div>
+
                 <h1 class="hero-title">
                     <span class="gradient-text">Bob Week 2026</span>
                 </h1>
@@ -44,8 +56,30 @@
                 <p class="hero-description">
                     A week-long journey through IBM's cutting-edge AI and automation technologies for CVS Health
                 </p>
+                
+                <!-- Stats Counter -->
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="6">0</div>
+                        <div class="stat-label">Labs</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="5">0</div>
+                        <div class="stat-label">Days</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="100">0</div>
+                        <div class="stat-label">% Hands-On</div>
+                    </div>
+                </div>
+
                 <div class="hero-buttons">
-                    <a href="#labs" class="btn btn-primary">Explore Labs</a>
+                    <a href="#labs" class="btn btn-primary">
+                        <span>Explore Labs</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
                     <a href="https://github.com/ibmcvsh/Bob-week" target="_blank" class="btn btn-secondary">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
@@ -60,18 +94,40 @@
         </div>
     </section>
 
+    <!-- Bob's Welcome Message -->
+    <section class="welcome-banner">
+        <div class="container">
+            <div class="welcome-content">
+                <div class="welcome-bob-icon">
+                    <div class="bob-mini">
+                        <div class="bob-mini-head"></div>
+                        <div class="bob-mini-body"></div>
+                    </div>
+                </div>
+                <div class="welcome-text">
+                    <h3>👋 Welcome to Bob Week!</h3>
+                    <p>I'm Bob, your AI assistant guide for this incredible journey through IBM's most powerful technologies. Together, we'll explore automation, AI, and enterprise solutions that transform how businesses operate.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Schedule Overview -->
     <section id="schedule" class="schedule-section">
         <div class="container">
-            <h2 class="section-title">Bob Week Lab Schedule</h2>
-            <p class="section-subtitle">Each day features hands-on labs focused on different IBM technologies</p>
+            <div class="section-header">
+                <h2 class="section-title">Bob Week Lab Schedule</h2>
+                <p class="section-subtitle">Each day features hands-on labs focused on different IBM technologies</p>
+            </div>
             
             <div class="timeline">
                 <div class="timeline-item" data-day="1">
                     <div class="timeline-marker">
                         <span class="day-number">1</span>
+                        <div class="timeline-pulse"></div>
                     </div>
                     <div class="timeline-content">
+                        <div class="timeline-icon">⚡</div>
                         <h3>Day 1: Watson Code Assistant for Z with Bob</h3>
                         <p class="timeline-time">Morning & Afternoon</p>
                         <p>Modernize mainframe development with AI</p>
@@ -79,14 +135,17 @@
                             <li>Transform COBOL and mainframe workflows</li>
                             <li>Watson's AI-powered code assistance</li>
                         </ul>
+                        <div class="timeline-badge">AI-Powered</div>
                     </div>
                 </div>
 
                 <div class="timeline-item" data-day="2">
                     <div class="timeline-marker">
                         <span class="day-number">2</span>
+                        <div class="timeline-pulse"></div>
                     </div>
                     <div class="timeline-content">
+                        <div class="timeline-icon">☕</div>
                         <h3>Day 1 Afternoon: Bob for Java Modernization & Ansible Automation</h3>
                         <p class="timeline-time">Afternoon</p>
                         <p>Automate application modernization</p>
@@ -94,14 +153,17 @@
                             <li>Modernize Java applications</li>
                             <li>Automate deployments with Ansible</li>
                         </ul>
+                        <div class="timeline-badge">Automation</div>
                     </div>
                 </div>
 
                 <div class="timeline-item" data-day="3">
                     <div class="timeline-marker">
                         <span class="day-number">3</span>
+                        <div class="timeline-pulse"></div>
                     </div>
                     <div class="timeline-content">
+                        <div class="timeline-icon">🔄</div>
                         <h3>Day 2: Bob with Business Automation Workflows + ODM</h3>
                         <p class="timeline-time">Morning</p>
                         <p>Build intelligent process automation & decision management</p>
@@ -110,14 +172,17 @@
                             <li>Custom widgets & AI-powered processes</li>
                             <li>Intelligent business rules</li>
                         </ul>
+                        <div class="timeline-badge">Workflow</div>
                     </div>
                 </div>
 
                 <div class="timeline-item" data-day="4">
                     <div class="timeline-marker">
                         <span class="day-number">4</span>
+                        <div class="timeline-pulse"></div>
                     </div>
                     <div class="timeline-content">
+                        <div class="timeline-icon">🔗</div>
                         <h3>Day 2 Afternoon: Bob with App Connect Enterprise</h3>
                         <p class="timeline-time">Afternoon</p>
                         <p>Master integration & API management</p>
@@ -125,14 +190,17 @@
                             <li>Build enterprise integrations</li>
                             <li>Manage APIs with IBM App Connect Enterprise</li>
                         </ul>
+                        <div class="timeline-badge">Integration</div>
                     </div>
                 </div>
 
                 <div class="timeline-item" data-day="5">
                     <div class="timeline-marker">
                         <span class="day-number">5</span>
+                        <div class="timeline-pulse"></div>
                     </div>
                     <div class="timeline-content">
+                        <div class="timeline-icon">🤖</div>
                         <h3>Day 3: Bob + watsonx Orchestrate Agent Development Kit</h3>
                         <p class="timeline-time">Full Day</p>
                         <p>Create intelligent automation agents</p>
@@ -141,6 +209,7 @@
                             <li>Orchestrate complex workflows</li>
                             <li>Integrate with enterprise systems</li>
                         </ul>
+                        <div class="timeline-badge">AI Agents</div>
                     </div>
                 </div>
             </div>
@@ -150,12 +219,15 @@
     <!-- Labs Section -->
     <section id="labs" class="labs-section">
         <div class="container">
-            <h2 class="section-title">Hands-On Labs</h2>
-            <p class="section-subtitle">Explore each technology with guided, practical exercises</p>
+            <div class="section-header">
+                <h2 class="section-title">Hands-On Labs</h2>
+                <p class="section-subtitle">Explore each technology with guided, practical exercises</p>
+            </div>
             
             <div class="labs-grid">
                 <!-- WCA4Z Lab -->
                 <div class="lab-card" data-tech="wca4z">
+                    <div class="lab-card-glow"></div>
                     <div class="lab-icon">
                         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
@@ -168,6 +240,11 @@
                         <span class="tag">Mainframe</span>
                         <span class="tag">COBOL</span>
                     </div>
+                    <div class="lab-features">
+                        <div class="feature-item">✓ AI Code Generation</div>
+                        <div class="feature-item">✓ Legacy Modernization</div>
+                        <div class="feature-item">✓ Intelligent Refactoring</div>
+                    </div>
                     <a href="https://github.com/ibmcvsh/Bob-week/tree/main/wca4z" target="_blank" class="lab-link">
                         Start Lab →
                     </a>
@@ -175,6 +252,7 @@
 
                 <!-- Java Mod Lab -->
                 <div class="lab-card" data-tech="java">
+                    <div class="lab-card-glow"></div>
                     <div class="lab-icon">
                         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
@@ -190,6 +268,11 @@
                         <span class="tag">Ansible</span>
                         <span class="tag">Automation</span>
                     </div>
+                    <div class="lab-features">
+                        <div class="feature-item">✓ App Modernization</div>
+                        <div class="feature-item">✓ Deployment Automation</div>
+                        <div class="feature-item">✓ Infrastructure as Code</div>
+                    </div>
                     <a href="https://github.com/ibmcvsh/Bob-week/tree/main/java-mod" target="_blank" class="lab-link">
                         Start Lab →
                     </a>
@@ -197,6 +280,7 @@
 
                 <!-- BAW Lab -->
                 <div class="lab-card" data-tech="baw">
+                    <div class="lab-card-glow"></div>
                     <div class="lab-icon">
                         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
@@ -214,6 +298,11 @@
                         <span class="tag">Process</span>
                         <span class="tag">AI</span>
                     </div>
+                    <div class="lab-features">
+                        <div class="feature-item">✓ Process Automation</div>
+                        <div class="feature-item">✓ Custom Widgets</div>
+                        <div class="feature-item">✓ AI Integration</div>
+                    </div>
                     <a href="https://github.com/ibmcvsh/Bob-week/tree/main/baw" target="_blank" class="lab-link">
                         Start Lab →
                     </a>
@@ -221,6 +310,7 @@
 
                 <!-- ODM Lab -->
                 <div class="lab-card" data-tech="odm">
+                    <div class="lab-card-glow"></div>
                     <div class="lab-icon">
                         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M12 2L2 7l10 5 10-5-10-5z"/>
@@ -235,6 +325,11 @@
                         <span class="tag">Decisions</span>
                         <span class="tag">Business Logic</span>
                     </div>
+                    <div class="lab-features">
+                        <div class="feature-item">✓ Business Rules</div>
+                        <div class="feature-item">✓ Decision Tables</div>
+                        <div class="feature-item">✓ Rule Governance</div>
+                    </div>
                     <a href="https://github.com/ibmcvsh/Bob-week/tree/main/ODM" target="_blank" class="lab-link">
                         Start Lab →
                     </a>
@@ -242,6 +337,7 @@
 
                 <!-- ACE Lab -->
                 <div class="lab-card" data-tech="ace">
+                    <div class="lab-card-glow"></div>
                     <div class="lab-icon">
                         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <circle cx="12" cy="12" r="10"/>
@@ -256,6 +352,11 @@
                         <span class="tag">API</span>
                         <span class="tag">Enterprise</span>
                     </div>
+                    <div class="lab-features">
+                        <div class="feature-item">✓ API Management</div>
+                        <div class="feature-item">✓ Data Integration</div>
+                        <div class="feature-item">✓ Message Flows</div>
+                    </div>
                     <a href="https://github.com/ibmcvsh/Bob-week/tree/main/ace" target="_blank" class="lab-link">
                         Start Lab →
                     </a>
@@ -263,6 +364,7 @@
 
                 <!-- WXO Lab -->
                 <div class="lab-card" data-tech="wxo">
+                    <div class="lab-card-glow"></div>
                     <div class="lab-icon">
                         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M12 2L2 7l10 5 10-5-10-5z"/>
@@ -278,6 +380,11 @@
                         <span class="tag">Orchestration</span>
                         <span class="tag">watsonx</span>
                     </div>
+                    <div class="lab-features">
+                        <div class="feature-item">✓ Agent Development</div>
+                        <div class="feature-item">✓ Workflow Orchestration</div>
+                        <div class="feature-item">✓ Enterprise Integration</div>
+                    </div>
                     <a href="https://github.com/ibmcvsh/Bob-week/tree/main/wxo" target="_blank" class="lab-link">
                         Start Lab →
                     </a>
@@ -289,27 +396,87 @@
     <!-- What You'll Learn -->
     <section id="about" class="learning-section">
         <div class="container">
-            <h2 class="section-title">What You'll Learn This Week</h2>
+            <div class="section-header">
+                <h2 class="section-title">What You'll Learn This Week</h2>
+                <p class="section-subtitle">Master cutting-edge technologies with hands-on experience</p>
+            </div>
             <div class="learning-grid">
                 <div class="learning-card">
                     <div class="learning-icon">🧠</div>
                     <h3>AI-Powered Development</h3>
                     <p>Code generation, intelligent automation, and agent orchestration</p>
+                    <ul class="learning-list">
+                        <li>Watson AI assistance</li>
+                        <li>Intelligent code generation</li>
+                        <li>AI agent development</li>
+                    </ul>
                 </div>
                 <div class="learning-card">
                     <div class="learning-icon">🔧</div>
                     <h3>Modern Development Practices</h3>
                     <p>API design, custom widgets, and integration patterns</p>
+                    <ul class="learning-list">
+                        <li>RESTful API design</li>
+                        <li>Custom UI components</li>
+                        <li>Integration patterns</li>
+                    </ul>
                 </div>
                 <div class="learning-card">
                     <div class="learning-icon">🏢</div>
                     <h3>Enterprise Solutions</h3>
                     <p>Mainframe modernization, workflow automation, and system integration</p>
+                    <ul class="learning-list">
+                        <li>Legacy system modernization</li>
+                        <li>Business process automation</li>
+                        <li>Enterprise architecture</li>
+                    </ul>
                 </div>
                 <div class="learning-card">
                     <div class="learning-icon">⚡</div>
                     <h3>Automation Tools</h3>
                     <p>Process automation, deployment automation, and testing frameworks</p>
+                    <ul class="learning-list">
+                        <li>CI/CD pipelines</li>
+                        <li>Infrastructure automation</li>
+                        <li>Automated testing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bob's Tips Section -->
+    <section class="tips-section">
+        <div class="container">
+            <div class="tips-header">
+                <div class="tips-bob">
+                    <div class="bob-mini-animated">
+                        <div class="bob-mini-head"></div>
+                        <div class="bob-mini-body"></div>
+                    </div>
+                </div>
+                <h2>Bob's Pro Tips for Success</h2>
+            </div>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-icon">💡</div>
+                    <h4>Start with the Basics</h4>
+                    <p>Don't skip the fundamentals - they're the foundation for advanced concepts</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🤝</div>
+                    <h4>Collaborate & Share</h4>
+                    <p>Learn from your peers and share your discoveries throughout the week</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🔍</div>
+                    <h4>Experiment Freely</h4>
+                    <p>The labs are your playground - try different approaches and learn from mistakes</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">📝</div>
+                    <h4>Document Your Journey</h4>
+                    <p>Take notes and screenshots - they'll be valuable references later</p>
                 </div>
             </div>
         </div>
@@ -320,8 +487,18 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>Bob Week 2026</h4>
+                    <div class="footer-logo">
+                        <img src="https://www.ibm.com/brand/experience-guides/developer/b1db1ae501d522a1a4b49613fe07c9f1/01_8-bar-positive.svg" alt="IBM Logo">
+                        <h4>Bob Week 2026</h4>
+                    </div>
                     <p>IBM AI & Automation Technologies for CVS Health</p>
+                    <div class="footer-social">
+                        <a href="https://github.com/ibmcvsh/Bob-week" target="_blank" aria-label="GitHub">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
@@ -329,6 +506,7 @@
                         <li><a href="https://github.com/ibmcvsh/Bob-week" target="_blank">GitHub Repository</a></li>
                         <li><a href="#schedule">Schedule</a></li>
                         <li><a href="#labs">Labs</a></li>
+                        <li><a href="#about">About</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -338,11 +516,23 @@
                         <li>Business Automation Workflow</li>
                         <li>watsonx Orchestrate</li>
                         <li>App Connect Enterprise</li>
+                        <li>Operational Decision Manager</li>
+                        <li>Java Modernization</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://www.ibm.com/docs" target="_blank">IBM Documentation</a></li>
+                        <li><a href="https://www.ibm.com/training" target="_blank">IBM Training</a></li>
+                        <li><a href="https://developer.ibm.com" target="_blank">IBM Developer</a></li>
+                        <li><a href="https://www.ibm.com/community" target="_blank">IBM Community</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 IBM Corporation. All rights reserved.</p>
+                <p class="footer-tagline">Powered by IBM AI & Automation | Built with ❤️ for CVS Health</p>
             </div>
         </div>
     </footer>
