@@ -204,14 +204,15 @@ body {
 }
 
 .bob-hero-image {
-    width: 280px;
+    max-width: 450px;
+    width: 100%;
     height: auto;
-    max-width: 100%;
     margin: 0 auto;
     display: block;
     animation: bobFloat 3s ease-in-out infinite;
     filter: drop-shadow(0 15px 35px rgba(15, 98, 254, 0.25));
     transition: all 0.3s ease;
+    border-radius: 12px;
 }
 
 .bob-hero-image:hover {
@@ -1206,7 +1207,7 @@ section {
     }
 
     .bob-hero-image {
-        width: 180px;
+        max-width: 280px;
     }
 
     .bob-avatar {
