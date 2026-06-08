@@ -31,7 +31,7 @@ Before starting the lab, install these VS Code extension to visualize and valida
 ### Import Life Insurance and Annuities Blueprint Document
 
 1. Download the provided blueprint document: `LifeInsuranceAndAnnuities-2.pdf`
-2. Drag and drop the PDF file into the folder process-creation/
+2. Drag and drop the PDF file into the folder Labs/process-creation/
 
 **Note:** If you don't have the document, you can request it from your instructor.
 
@@ -46,12 +46,14 @@ Before starting the lab, install these VS Code extension to visualize and valida
 
 **Initial Setup:**
 - Ensure Bob is in BAW Blueprint Parser mode or instruct Bob: `Switch to BAW Blueprint Parser mode`
-- Verify the blueprint document is located at: `Labs/process-creation/lab-docs/LifeInsuranceAndAnnuities-2.pdf`
+- Verify the blueprint document is located at: `Labs/process-creation/LifeInsuranceAndAnnuities-2.pdf`
 
 **Prompt to Bob:**
 
 ```
-Parse [`Labs/process-creation/lab-docs/LifeInsuranceAndAnnuities-2.pdf`](Labs/process-creation/lab-docs/LifeInsuranceAndAnnuities-2.pdf) end to end for context `LifeInsuranceAndAnnuities` and generate all supported Blueprint Parser artifacts. This document contains processes for annuity purchase, policy application and purchase, and policy replacement.
+Parse @/Labs/process-creation/LifeInsuranceAndAnnuities-2.pdf end to end for context `LifeInsuranceAndAnnuities`
+and generate all supported Blueprint Parser artifacts.
+This document contains processesfor annuity purchase, policy application and purchase, and policy replacement.
 ```
 
 **What This Does:**
@@ -73,7 +75,11 @@ Parse [`Labs/process-creation/lab-docs/LifeInsuranceAndAnnuities-2.pdf`](Labs/pr
 **Prompt to Bob:**
 
 ```
-Extract business processes from the LifeInsuranceAndAnnuities blueprint. Identify and generate BPMN workflows for the following processes: (1) Policy Application and Purchase; (2) Policy Replacement; (3) Annuity Purchase.
+Extract business processes from the LifeInsuranceAndAnnuities blueprint.
+Identify and generate BPMN workflows for the following processes:
+ (1) Policy Application and Purchase;
+ (2) Policy Replacement;
+ (3) Annuity Purchase.
 ```
 
 **What This Does:**
@@ -114,7 +120,8 @@ Perform complete analysis of the LifeInsuranceAndAnnuities blueprint.
 **Prompt to Bob:**
 
 ```
-Create a zip file in output/ named LifeInsuranceAndAnnuities-ProcessApp.zip containing the generated BPMN files.
+Create a zip file in output/ named LifeInsuranceAndAnnuities-ProcessApp.zip
+containing the generated BPMN files.
 ```
 
 **What This Does:**

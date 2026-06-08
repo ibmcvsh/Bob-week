@@ -445,7 +445,7 @@ Report the deployment status and any issues encountered.
 3. Add the following code to the pre-script section:
 
 ```
-tw.local.taskdata = {
+tw.local.taskData = {
   title: "Implement User Authentication",
   description: "Add OAuth 2.0 authentication to the application with support for Google and Microsoft providers",
   assignee: "John Smith",
@@ -453,13 +453,13 @@ tw.local.taskdata = {
   priority: "High",
   status: "In Progress"
 };
-tw.local.progressdata = {
+tw.local.progressData = {
   label: "Project Completion",
   currentValue: 45,
   maxValue: 100,
   showPercentage: true
 };
-tw.local.statusdata = {
+tw.local.statusData = {
   label: "Approved",
   status: "approved",
   icon: "✓"
@@ -468,48 +468,13 @@ tw.local.statusdata = {
 
 ---
 
-## Expected File Structure
-
-```
-BOB-BAW/
-├── package_baw.py (updated with new widgets)
-├── Labs/custom-widget-dev/toolkit.config.json
-├── lab-docs/
-│   ├── PM_Widgets_Test_Guide.md
-│   └── PM_Widgets_Usage_Examples.md
-├── business-objects/
-│   └── generated/
-│       ├── TaskCard/
-│       │   └── TaskData.json
-│       ├── ProgressTracker/
-│       │   └── ProgressData.json
-│       └── StatusBadge/
-│           └── StatusData.json
-├── widgets/
-│   ├── TaskCard/
-│   │   └── widget/
-│   │       ├── config.json
-│   │       ├── Layout.html
-│   │       ├── InlineCSS.css
-│   │       └── inlineJavascript.js
-│   ├── ProgressTracker/
-│   │   └── widget/
-│   │       ├── config.json
-│   │       ├── Layout.html
-│   │       ├── InlineCSS.css
-│   │       └── inlineJavascript.js
-│   └── StatusBadge/
-│       └── widget/
-│           ├── config.json
-│           ├── Layout.html
-│           ├── InlineCSS.css
-│           └── inlineJavascript.js
-└── output/
-    └── Custom_Widgets_[version].twx
-```
+### Step 6: Test your UI Coach
+1. Click the Checkbox icon at the top right to save.
+2. Click Run.
 
 ---
-
+#### **Congratulations!** You have just completed the Custom Widget Development lab with Bob!
+---
 ## Key Takeaways
 
 **1. Bob Accelerates Widget Development**
