@@ -22,6 +22,68 @@ This lab guides you through using **Bob** to create a complete **Project Managem
 
 ---
 
+## MCP Server Setup
+
+Before starting the lab, you need to configure the **baw-admin MCP server** to enable Bob to communicate with your BAW environment for toolkit deployment.
+
+### Step 1: Create MCP Configuration File
+
+1. **Navigate to the `.bob` directory** in your project root
+2. **Locate the `dummy_mcp.json` file** - This is a template with placeholder values
+3. **Create a new file named `mcp.json`** in the same directory
+4. **Copy the contents from `dummy_mcp.json` to `mcp.json`**
+
+### Step 2: Configure BAW Server Credentials
+
+Edit the `mcp.json` file and replace the placeholder values with your actual BAW server credentials:
+
+**For this lab, you only need to configure the `baw-admin` server:**
+
+```json
+{
+    "mcpServers": {
+        "baw-admin": {
+           "command": "npx",
+            "args": [
+                "-y",
+                "github:MalekJabri/baw-admin-mcp-server-standalone",
+                "baw-admin-mcp-server"
+            ],
+            "env": {
+                "BAW_BASE_URL": "https://your-baw-server.example.com/bas/ops",
+                "BAW_USERNAME": "your-username",
+                "BAW_PASSWORD": "your-password",
+                 "BAW_REJECT_UNAUTHORIZED": "false"
+            },
+            "alwaysAllow": [
+                "get_install_status",
+                "login"
+            ]
+        }
+    }
+}
+```
+
+**Replace these values:**
+- `BAW_BASE_URL`: Your BAW server URL ending with `/bas/ops`
+- `BAW_USERNAME`: Your BAW username
+- `BAW_PASSWORD`: Your BAW password
+
+**Note:** The `baw-services` server is only needed for the automated testing lab, not for this custom widget lab.
+
+### Step 3: Verify MCP Server in Bob Settings
+
+1. **Open Bob Settings**
+2. **Navigate to MCP Servers section**
+3. **Verify that `baw-admin` server is listed and active**
+4. **Check that the server shows a green status indicator**
+
+If the server is not active, restart Bob or check the configuration file for syntax errors.
+
+
+
+---
+
 ## Creating and Deploying Custom Widgets Lab Instructions
 
 ### Part 1: TaskCard Widget Creation
