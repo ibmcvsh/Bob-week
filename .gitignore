@@ -166,3 +166,4 @@ cython_debug/
 # Bob MCP configuration
 .bob/mcp.json
 *.DS_Store
+java-mod/package-lock.json
