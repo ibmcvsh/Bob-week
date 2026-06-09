@@ -167,3 +167,4 @@ cython_debug/
 .bob/mcp.json
 *.DS_Store
 java-mod/package-lock.json
+ODM/ODM-MCPs/ibm-odm-management-mcp-server/*
