@@ -27,6 +27,9 @@ Transform COBOL and mainframe workflows using Watson's AI-powered code assistanc
 
 ### ☕ Day 1 Afternoon: Bob for Java Modernization & Ansible Automation
 
+**Install GIT**:
+https://github.com/git-for-windows/git/releases/download/v2.54.0.windows.1/Git-2.54.0-64-bit.exe
+
 **Automate application modernization**
 
 Learn to modernize Java applications and automate deployments with Ansible.
