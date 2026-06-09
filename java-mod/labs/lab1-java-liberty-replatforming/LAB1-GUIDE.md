@@ -65,12 +65,19 @@ Before starting this lab, ensure you have:
 
 If you have multiple Java versions installed and need to switch to Java 8 for this lab:
 
+**Windows:**
+```ps
+$env:JAVA_HOME = "C:\Program Files\Zulu\zulu-8"; $env:PATH = "C:\Program Files\Zulu\zulu-8\bin;" + $env:PATH; java -version
+```
+
+
 ```bash
 # Using SDKMAN (if installed via automated script)
 sdk use java 8.0.492-zulu
 
 # Verify
 java -version
+
 ```
 
 ---
