@@ -17,15 +17,32 @@ Validate that the DMOE/BAMOE custom mode can:
 
 ## 1. Import Custom Mode
 
-Import the DMOE/BAMOE custom mode YAML into BOB.
+To use the DMOE/BAMOE custom mode, you need to import it into Bob:
+
+1. **Open Bob Settings**
+   - Click on the settings icon in Bob's interface
+   - Or use the keyboard shortcut to access settings
+
+2. **Navigate to Custom Modes**
+   - In the settings menu, locate and click on **"Custom Modes"**
+
+3. **Import the Mode File**
+   - Click the **"Import"** button
+   - Browse to find the file: `dmoe_bamoe_custom_modes_final (1).yaml` located in the `DMOE` directory
+   - Select the file and confirm the import
+
+4. **Verify Import**
+   - The DMOE/BAMOE custom mode should now appear in your available modes list
 
 ## 2. Select Custom Mode
 
-From the BOB mode dropdown select:
+From the Bob mode dropdown, select:
 
 ```text
 IBM Decision Manager Open Edition (DMOE/BAMOE)
 ```
+
+The mode is now active and ready to use for the lab exercises below.
 
 ---
 
