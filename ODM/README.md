@@ -70,7 +70,7 @@ Master the art of building ODM decision services with AI assistance, leveraging 
 - ✅ Decision service optimization
 - ✅ Rule governance and compliance
 
-**[👉 Click Here to Get Started with ODM BobMode Lab](./ODM-BobMode/README.md)**
+**[👉 Click Here to Get Started with ODM BobMode Lab](./ODM-BobMode/ODM-AI-toolkit-for-Bob/README.md)**
 
 ---
 
