@@ -13,6 +13,10 @@
 
 ## SET UP INSTRUCTIONS
 
+**1. Install GIT**:
+https://github.com/git-for-windows/git/releases/download/v2.54.0.windows.1/Git-2.54.0-64-bit.exe
+
+**2. Clone the repo**
 Run the following line in your Bob terminal:
 
 ```
@@ -36,8 +40,6 @@ Transform COBOL and mainframe workflows using Watson's AI-powered code assistanc
 
 ### ☕ Day 1 Afternoon: Bob for Java Modernization & Ansible Automation
 
-**Install GIT**:
-https://github.com/git-for-windows/git/releases/download/v2.54.0.windows.1/Git-2.54.0-64-bit.exe
 
 **Automate application modernization**
 
