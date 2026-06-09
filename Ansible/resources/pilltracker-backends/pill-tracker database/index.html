@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pill Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💊 Pill Tracker</h1>
+        </header>
+
+        <div class="user-selection">
+            <label for="userSelect">Select User:</label>
+            <select id="userSelect">
+                <option value="">-- Choose a user --</option>
+            </select>
+        </div>
+
+        <div class="time-control">
+            <div class="current-time">
+                <strong>Current Time:</strong> <span id="currentTime"></span>
+            </div>
+            <button id="advanceTimeBtn" class="btn btn-primary">⏰ Advance Time by 8 Hours</button>
+        </div>
+
+        <div id="userInfo" class="user-info hidden">
+            <h2>Welcome, <span id="userName"></span>!</h2>
+            
+            <div id="notifications" class="notifications"></div>
+
+            <div class="prescriptions">
+                <h3>Your Prescriptions</h3>
+                <div id="prescriptionList"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

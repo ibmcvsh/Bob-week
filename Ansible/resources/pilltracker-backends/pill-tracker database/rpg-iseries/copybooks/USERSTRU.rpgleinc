@@ -1,0 +1,20 @@
+      //*****************************************************************
+      //* USERSTRU.RPGLEINC - User Structure Copybook
+      //* Description: Data structure for user information
+      //* Used by: All programs accessing user data
+      //*****************************************************************
+
+      //* User Record Structure
+     D UserRec         DS                  Qualified
+     D  UserId                       10I 0
+     D  UserName                    255A   Varying
+     D  CreatedTs                      Z
+
+      //* User Array Structure
+     D UserArray       DS                  Qualified Dim(100)
+     D  UserId                       10I 0
+     D  UserName                    255A   Varying
+     D  CreatedTs                      Z
+
+      //* User Count
+     D UserCount       S             10I 0

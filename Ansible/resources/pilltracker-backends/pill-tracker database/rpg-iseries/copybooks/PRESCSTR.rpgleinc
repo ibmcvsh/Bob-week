@@ -1,0 +1,28 @@
+      //*****************************************************************
+      //* PRESCSTR.RPGLEINC - Prescription Structure Copybook
+      //* Description: Data structure for prescription information
+      //* Used by: All programs accessing prescription data
+      //*****************************************************************
+
+      //* Prescription Record Structure
+     D PrescRec        DS                  Qualified
+     D  PrescId                      10I 0
+     D  UserId                       10I 0
+     D  PrescName                   255A   Varying
+     D  PrescDesc                   500A   Varying
+     D  FreqHours                     5I 0
+     D  CreatedTs                      Z
+     D  LastTakenTs                    Z
+
+      //* Prescription Array Structure
+     D PrescArray      DS                  Qualified Dim(100)
+     D  PrescId                      10I 0
+     D  UserId                       10I 0
+     D  PrescName                   255A   Varying
+     D  PrescDesc                   500A   Varying
+     D  FreqHours                     5I 0
+     D  CreatedTs                      Z
+     D  LastTakenTs                    Z
+
+      //* Prescription Count
+     D PrescCount      S             10I 0

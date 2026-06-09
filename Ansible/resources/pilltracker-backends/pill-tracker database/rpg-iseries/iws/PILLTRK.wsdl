@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  PILLTRK.WSDL - Web Services Description for Pill Tracker API
+  Description: WSDL file for deploying RPG programs as REST services
+  Author: System Generated
+  Date: 2026-03-05
+-->
+<definitions name="PillTrackerAPI"
+             targetNamespace="http://pilltracker.com/api"
+             xmlns="http://schemas.xmlsoap.org/wsdl/"
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+             xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+             xmlns:xs="http://www.w3.org/2001/XMLSchema"
+             xmlns:tns="http://pilltracker.com/api">
+
+  <!-- Service Configuration -->
+  <service name="PillTrackerService">
+    <documentation>
+      Pill Tracker REST API Service
+      Provides endpoints for managing users, prescriptions, and dose tracking
+    </documentation>
+
+    <!-- Get Users Endpoint -->
+    <port name="GetUsersPort" binding="tns:GetUsersBinding">
+      <http:address location="/api/users"/>
+      <documentation>
+        GET /api/users
+        Returns all users in JSON format
+        Program: PILLTRK/PTGETURS
+      </documentation>
+    </port>
+
+    <!-- Get Prescriptions Endpoint -->
+    <port name="GetPrescriptionsPort" binding="tns:GetPrescriptionsBinding">
+      <http:address location="/api/users/{userId}/prescriptions-with-history"/>
+      <documentation>
+        GET /api/users/:userId/prescriptions-with-history
+        Returns prescriptions for a user with last dose information
+        Program: PILLTRK/PTGETPRS
+      </documentation>
+    </port>
+
+    <!-- Post Dose Endpoint -->
+    <port name="PostDosePort" binding="tns:PostDoseBinding">
+      <http:address location="/api/doses"/>
+      <documentation>
+        POST /api/doses
+        Records a dose taken
+        Program: PILLTRK/PTPOSTDS
+      </documentation>
+    </port>
+  </service>
+
+  <!-- Bindings -->
+  <binding name="GetUsersBinding" type="tns:GetUsersPortType">
+    <http:binding verb="GET"/>
+    <operation name="GetUsers">
+      <http:operation location="/api/users"/>
+      <input>
+        <http:urlEncoded/>
+      </input>
+      <output>
+        <mime:content type="application/json"/>
+      </output>
+    </operation>
+  </binding>
+
+  <binding name="GetPrescriptionsBinding" type="tns:GetPrescriptionsPortType">
+    <http:binding verb="GET"/>
+    <operation name="GetPrescriptions">
+      <http:operation location="/api/users/{userId}/prescriptions-with-history"/>
+      <input>
+        <http:urlEncoded/>
+      </input>
+      <output>
+        <mime:content type="application/json"/>
+      </output>
+    </operation>
+  </binding>
+
+  <binding name="PostDoseBinding" type="tns:PostDosePortType">
+    <http:binding verb="POST"/>
+    <operation name="PostDose">
+      <http:operation location="/api/doses"/>
+      <input>
+        <mime:content type="application/json"/>
+      </input>
+      <output>
+        <mime:content type="application/json"/>
+      </output>
+    </operation>
+  </binding>
+
+</definitions>
+
+<!-- Made with Bob -->

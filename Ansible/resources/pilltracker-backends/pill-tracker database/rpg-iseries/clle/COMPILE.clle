@@ -1,0 +1,98 @@
+             PGM
+/**********************************************************************/
+/* COMPILE.CLLE - Compile All Pill Tracker RPG Programs              */
+/* Description: CL program to compile all RPG ILE programs           */
+/* Author: System Generated                                           */
+/* Date: 2026-03-05                                                   */
+/**********************************************************************/
+
+             DCL        VAR(&MSGID) TYPE(*CHAR) LEN(7)
+             DCL        VAR(&MSGDTA) TYPE(*CHAR) LEN(512)
+
+             MONMSG     MSGID(CPF0000) EXEC(GOTO CMDLBL(ERROR))
+
+/**********************************************************************/
+/* Create source physical files if they don't exist                   */
+/**********************************************************************/
+             CRTSRCPF   FILE(PILLTRK/QRPGLESRC) RCDLEN(112) +
+                          TEXT('RPG ILE Source')
+             MONMSG     MSGID(CPF7302)  /* File already exists */
+
+             CRTSRCPF   FILE(PILLTRK/QRPGLEREF) RCDLEN(112) +
+                          TEXT('RPG ILE Copybooks')
+             MONMSG     MSGID(CPF7302)
+
+/**********************************************************************/
+/* Compile PTGETURS - Get Users                                       */
+/**********************************************************************/
+             SNDPGMMSG  MSG('Compiling PTGETURS...')
+
+             CRTSQLRPGI OBJ(PILLTRK/PTGETURS) +
+                          SRCFILE(PILLTRK/QRPGLESRC) +
+                          SRCMBR(PTGETURS) +
+                          COMMIT(*NONE) +
+                          DBGVIEW(*SOURCE) +
+                          REPLACE(*YES) +
+                          COMPILEOPT('INCDIR(''/QIBM/include'' +
+                          ''/QIBM/ProdData/OS/WebServices/wsdl/include'') +
+                          DBGVIEW(*SOURCE)')
+
+             IF         COND(&MSGID *NE ' ') THEN(DO)
+                SNDPGMMSG  MSG('PTGETURS compiled successfully')
+             ENDDO
+
+/**********************************************************************/
+/* Compile PTGETPRS - Get Prescriptions                               */
+/**********************************************************************/
+             SNDPGMMSG  MSG('Compiling PTGETPRS...')
+
+             CRTSQLRPGI OBJ(PILLTRK/PTGETPRS) +
+                          SRCFILE(PILLTRK/QRPGLESRC) +
+                          SRCMBR(PTGETPRS) +
+                          COMMIT(*NONE) +
+                          DBGVIEW(*SOURCE) +
+                          REPLACE(*YES) +
+                          COMPILEOPT('INCDIR(''/QIBM/include'' +
+                          ''/QIBM/ProdData/OS/WebServices/wsdl/include'') +
+                          DBGVIEW(*SOURCE)')
+
+             IF         COND(&MSGID *NE ' ') THEN(DO)
+                SNDPGMMSG  MSG('PTGETPRS compiled successfully')
+             ENDDO
+
+/**********************************************************************/
+/* Compile PTPOSTDS - Post Dose                                       */
+/**********************************************************************/
+             SNDPGMMSG  MSG('Compiling PTPOSTDS...')
+
+             CRTSQLRPGI OBJ(PILLTRK/PTPOSTDS) +
+                          SRCFILE(PILLTRK/QRPGLESRC) +
+                          SRCMBR(PTPOSTDS) +
+                          COMMIT(*NONE) +
+                          DBGVIEW(*SOURCE) +
+                          REPLACE(*YES) +
+                          COMPILEOPT('INCDIR(''/QIBM/include'' +
+                          ''/QIBM/ProdData/OS/WebServices/wsdl/include'') +
+                          DBGVIEW(*SOURCE)')
+
+             IF         COND(&MSGID *NE ' ') THEN(DO)
+                SNDPGMMSG  MSG('PTPOSTDS compiled successfully')
+             ENDDO
+
+/**********************************************************************/
+/* Success                                                            */
+/**********************************************************************/
+             SNDPGMMSG  MSG('All programs compiled successfully')
+             GOTO       CMDLBL(ENDPGM)
+
+/**********************************************************************/
+/* Error Handler                                                      */
+/**********************************************************************/
+ ERROR:      RCVMSG     MSGTYPE(*EXCP) MSGDTA(&MSGDTA) MSGID(&MSGID)
+             SNDPGMMSG  MSG('Compilation error: ' *CAT &MSGID *CAT +
+                          ' - ' *CAT &MSGDTA)
+
+/**********************************************************************/
+/* End Program                                                        */
+/**********************************************************************/
+ ENDPGM:     ENDPGM
