@@ -48,7 +48,10 @@ Learn how to create comprehensive test suites for your BAW services, ensuring re
 - ✅ Service testing best practices
 - ✅ Quality assurance workflows
 
+
 **[👉 Click Here to Get Started with Automated Testing Lab](../baw/Labs/automated-testing/BAW_Service_Testing_Lab.md)**
+
+</div>
 
 ---
 
@@ -63,7 +66,10 @@ Master the art of building custom UI components for BAW, leveraging templates an
 - ✅ Template-based development
 - ✅ Integration with BAW Coach framework
 
+
 **[👉 Click Here to Get Started with Custom Widget Lab](../baw/Labs/custom-widget-dev/Project_Management_Widgets_Lab.md)**
+
+</div>
 
 ---
 
@@ -78,7 +84,10 @@ Transform business requirements and documents into executable BAW processes usin
 - ✅ BPMN generation techniques
 - ✅ Business logic extraction
 
+
 **[👉 Click Here to Get Started with AI-Powered Process Lab](../baw/Labs/process-creation/BAW_Process_Creation_LifeInsurance_Lab_Instructions.md)**
+
+</div>
 
 ---
 
