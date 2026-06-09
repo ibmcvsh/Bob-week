@@ -109,7 +109,7 @@ Modify or replace the entire contents of the configuration file with the followi
 
 Now let's verify the integration works correctly by running a series of test prompts.
 
-### Test 1: Retrieve Execution Statistics
+### Example 1: Retrieve Execution Statistics
 
 **Purpose**: Verify Bob can connect to ODM and retrieve system information.
 
@@ -144,7 +144,7 @@ Bob should display execution unit information, deployed RuleApps, and their rule
 
 ---
 
-### Test 2: Execute a Decision Service
+### Example 2: Execute a Decision Service
 
 **Purpose**: Test Bob's ability to execute ODM decision services through natural language.
 
@@ -176,7 +176,7 @@ The loan should be **rejected** with the message: *"The loan cannot exceed 1,000
 
 ---
 
-### Test 3: Discover Business Rules
+### Example 3: Discover Business Rules
 
 **Purpose**: Show how Bob can analyze and explain business rules in ODM.
 
@@ -204,7 +204,7 @@ Bob will:
 
 ---
 
-### Test 4: Modify and Deploy Business Rules
+### Example 4: Modify and Deploy Business Rules
 
 **Purpose**: Demonstrate Bob's ability to modify ODM rules and deploy changes.
 
@@ -268,7 +268,7 @@ the new version.
 
 ---
 
-### Test 5: Verify the Rule Change
+### Example 5: Verify the Rule Change
 
 **Purpose**: Confirm the modified rule is working correctly.
 
@@ -289,6 +289,102 @@ Bob will execute the `miniloan_serviceoperation` tool using the **new version 1.
 The loan should now be **approved** (or processed differently) since the maximum has been increased to $2,000,000.
 
 > **✅ Success Indicator**: The loan is no longer rejected for exceeding the maximum amount.
+
+---
+
+### Example 6: Discover tools
+
+**Purpose**: Explore the ODM management tools available through the MCP server.
+
+#### Instructions:
+
+Enter this prompt:
+
+```
+What IBM ODM management tools do you have available? List them with a brief description of what each one does.
+```
+
+#### What to Expect:
+
+Bob will enumerate the available ODM management MCP tools and summarize the purpose of each one.
+
+#### Expected Output:
+
+A list of management tools with short descriptions explaining what each tool does.
+
+> **✅ Success Indicator**: You should see a concise inventory of ODM management capabilities exposed by the MCP server.
+
+---
+
+### Example 7: List DC projects
+
+**Purpose**: Verify Bob can inspect Decision Center projects and summarize project metadata.
+
+#### Instructions:
+
+Enter this prompt:
+
+```
+Show me all the projects in Decision Center. For each one, tell me how many branches it has and when it was last modified.
+```
+
+#### What to Expect:
+
+Bob will query Decision Center projects, count their branches, and report the latest modification timestamp for each project.
+
+#### Expected Output:
+
+A project-by-project summary including branch counts and last modified dates.
+
+> **✅ Success Indicator**: You should see multiple Decision Center projects listed with both branch totals and modification details.
+
+---
+
+### Example 8: Explore branches
+
+**Purpose**: Inspect project branches and identify which deployment is currently in production.
+
+#### Instructions:
+
+Enter this prompt:
+
+```
+For the Loan Validation Service project, list all branches and their associated deployments. Which branch is currently deployed to production?
+```
+
+#### What to Expect:
+
+Bob will inspect the specified Decision Center project, enumerate its branches, map deployments to each branch, and identify the production deployment.
+
+#### Expected Output:
+
+A branch listing with associated deployments and a clear indication of the branch currently deployed to production.
+
+> **✅ Success Indicator**: You should see the production branch explicitly identified alongside the deployment mapping.
+
+---
+
+### Example 9: Inspect RES
+
+**Purpose**: Verify Bob can inspect Rule Execution Server deployments and report archive metadata.
+
+#### Instructions:
+
+Enter this prompt:
+
+```
+List all ruleset archives deployed in the Decision Server. Show path, version, and deployment date for each one.
+```
+
+#### What to Expect:
+
+Bob will query the Rule Execution Server and return deployed ruleset archives with their key metadata.
+
+#### Expected Output:
+
+A list of deployed ruleset archives showing path, version, and deployment date for each archive.
+
+> **✅ Success Indicator**: You should see a structured inventory of deployed ruleset archives from the Decision Server.
 
 ---
 

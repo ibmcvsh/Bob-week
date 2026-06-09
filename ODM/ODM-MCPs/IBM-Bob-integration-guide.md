@@ -116,7 +116,7 @@ This step is optional and only needed if you choose to run ODM as a container on
   - **Password:** `odmAdmin`
 
 Now that your ODM is running, return to the lab guide and continue with the next step.
-***[Lab Guide](./ODM-MCP-Server-Lab.md#configure-mcp-within-ibm-bob)**
+***[Lab Guide](./README.md#part-1-configure-mcp-servers-in-ibm-bob)**
 
 
 
