@@ -8,9 +8,10 @@
 *A week-long journey through IBM's cutting-edge AI and automation technologies*
 
 </div>
+
 ---
 
-## *SET UP INSTRUCTIONS*
+## SET UP INSTRUCTIONS
 
 Run the following line in your Bob terminal:
 
