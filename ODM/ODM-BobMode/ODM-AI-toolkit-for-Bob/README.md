@@ -50,15 +50,15 @@ https://github.com/user-attachments/assets/c7c9595b-2b05-4fde-aa51-673526783674
 - **Docker/Podman/Rancher** - For ODM Build Command (optional, auto-downloaded)
 
 ### Install Eclipse 
-1. Download Eclipse from [Install here](https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2024-12/R/eclipse-java-2024-12-R-win32-x86_64.zip)
-2. Double click on the .exe file to install
-3. Launch Eclipse
-4. Go to Help -> Install New Software -> Add -> Name it Rule Designer -> Location paste the url https://raw.githubusercontent.com/DecisionsDev/ruledesigner/9.5.0/p2
-2. Install the ODM Rule Designer plugin:
-   - Go to **Help > Eclipse Marketplace**
-   - Search for **ODM Rule Designer**
-   - Install the plugin
-3. Restart Eclipse
+1. Download Eclipse 2026.03
+   - Windows x86 2026.03 - [Install here](https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2024-12/R/eclipse-java-2024-12-R-win32-x86_64.zip)
+3. Double click on the .exe file to install
+4. Launch Eclipse
+5. Go to Help -> Install New Software -> Add -> Name it Rule Designer -> Location paste the url
+   - ```https://raw.githubusercontent.com/DecisionsDev/ruledesigner/9.5.0/p2```
+6. Confirm install
+   - Go to `Window` -> `Perpesctive` -> `Open Perspective` -> `Other...` -> `Rule` -> Click ok
+   - Close tab for welcome screen and you should see panel with `Decision Service Map` and `IBM` on center bottom
 
 ### 1️⃣ Import the ODM Rule Designer Bob Mode
 
