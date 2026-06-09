@@ -8,7 +8,15 @@
 *A week-long journey through IBM's cutting-edge AI and automation technologies*
 
 </div>
+---
 
+## *SET UP INSTRUCTIONS*
+
+Run the following line in your Bob terminal:
+
+```
+git clone https://github.com/ibmcvsh/Bob-week.git
+```
 ---
 
 ## Bob Week Lab Schedule
