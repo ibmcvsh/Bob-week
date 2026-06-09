@@ -14,6 +14,8 @@
 ## SET UP INSTRUCTIONS
 
 **1. Install GIT**:
+Click on this link, then double click on the .exe file click through installer:
+
 https://github.com/git-for-windows/git/releases/download/v2.54.0.windows.1/Git-2.54.0-64-bit.exe
 
 **2. Clone the repo**
