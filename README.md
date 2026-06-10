@@ -83,6 +83,16 @@ Develop AI agents that orchestrate complex workflows and integrate with enterpri
 
 ---
 
+### 🔷 Day 3:  watsonx Assistant for Z and Ansible for Z
+
+**Develop automation and AI agents to assist in Z operations**
+
+Develop an AI agent that modifies skeleton JCL jobs based on your input submits your job for you, and performs analysis on the output to streamline your Z operational work.
+
+**[👉 Start watsonx Assistant for Z labs Labs](./wxa4z/README.md)**
+
+---
+
 ## 📚 What You'll Learn This Week
 
 Throughout Bob Week, you'll gain hands-on experience with:
