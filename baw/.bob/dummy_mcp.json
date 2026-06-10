@@ -8,7 +8,7 @@
                 "baw-admin-mcp-server"
             ],
             "env": {
-                "BAW_BASE_URL": "{YOUR BAW URL}/bas/ops",
+                "BAW_BASE_URL": "https://cpd-cp4ba.apps.itz-b1ednj.infra01-lb.wdc07.techzone.ibm.com/bas/ops",
                 "BAW_USERNAME": "YOUR USERNAME",
                 "BAW_PASSWORD": "YOUR PASSWORD",
                  "BAW_REJECT_UNAUTHORIZED": "false"
@@ -26,7 +26,7 @@
                 "ibm-baw-mcp-server"
             ],
             "env": {
-                "ENDPOINT": "{YOUR BAW URL}/bas",
+                "ENDPOINT": "https://cpd-cp4ba.apps.itz-b1ednj.infra01-lb.wdc07.techzone.ibm.com/bas",
                 "USERID": "YOUR USERNAME",
                 "PASSWORD": "YOUR PASSWORD",
                 "VERIFY_SSL": "false",
