@@ -186,7 +186,7 @@ Finally, you will create an **agent** that orchestrates the tools you created to
     12. If no, ask the user if they want to submit the job in the dataset
     13. If the user does want to submit the job, use your tool to run the job
     14. Wait 10 seconds and then output the status of the job using your tool to the user in the chat window.
-    15. If the user does not want to submit the job, ask the user if they want to make any more changes.
+    15. Analyze the reuslts of the job. If it seems the job failed, try to explain why the job failed and how to fix it.
     ```
 
 22. After creating the agent, **upload it to watsonx Assistant for Z using the Orchestrate CLI**:
