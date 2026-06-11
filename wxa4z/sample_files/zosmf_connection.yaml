@@ -5,8 +5,8 @@ environments:
     draft:
         kind: basic
         type: team
-        server_url: https://<public-ip>:10443/zosmf/                 
+        server_url: https://52.118.209.149:10443/               
     live:
         kind: basic
         type: team
-        server_url: https://<public-ip>:10443/zosmf/
+        server_url: https://52.118.209.149:10443/

@@ -1,4 +1,4 @@
-## Welcome to the watsonx Assistant for Z Session for Bob Week! 🎉
+## Welcome to the watsonx Assistant for Z Session for Bob Week! 
 
 ### Lab Overview
 
@@ -15,7 +15,7 @@ In this lab, you will learn how to use IBM Bob and the watsonx Orchestrate Agent
 
 3. **Create an Agent** - Build an agent that orchestrates these tools to help users run skeleton/template jobs with custom parameters
 
-All components (tools, connections, and agents) will be uploaded to watsonx Orchestrate using the **Orchestrate CLI**.
+All components (tools, connections, and agents) will be uploaded to watsonx Asisstant for Z using the **Orchestrate CLI**.
 
 ---
 
@@ -36,12 +36,12 @@ IBM Client Engineering Team will walk through how to set up your environment for
 6. Login to your orchestrate instance via the orchestrate cli. To login, enter the following commands in the Bob Terminal (replacing < orchestrate service instance url > with the service instance you found in step 2):
    ```bash
    orchestrate env add -n wxa4z-bobweek -u <orchestrate service instance url>
-   orchestrate env activate -n wxa4z-bobweek
+   orchestrate env activate wxa4z-bobweek
    ```
 
 7. Use git to pull from the lab repository's main branch to get the most recent lab guide:
    ```bash
-   git pull origin main https://github.com/ibmcvsh/Bob-week.git
+   git pull origin main
    cd wxa4z
    ```
 
@@ -57,10 +57,10 @@ First thing we need to do is create a **connection to the z/OSMF API** so your t
 
 9. In the IBM Bob chat box, ask Bob to:
    ```
-   Create a connection to the zosmf api using the watsonx Orchestrate ADK. Use the following link as reference: https://developer.watson-orchestrate.ibm.com/connections/build_connections. Use the connection.yaml file in the sample_files folder as a reference and template. You will use basic auth with Team credentials for both draft and live. The server url is https://52.118.209.149:10443/zosmf . Create a folder called connections and put this new file in that folder.
+   Create a connection to the zosmf api using the watsonx Orchestrate ADK. Use the following link as reference: https://developer.watson-orchestrate.ibm.com/connections/build_connections. Use the connection.yaml file in the sample_files folder as a reference and template. You will use basic auth with Team credentials for both draft and live. The server url is https://52.118.209.149:10443/ . Create a folder called connections and put this new file in that folder.
    ```
 
-10. Once the connection is created, **upload it using the Orchestrate CLI** and then set the credentials by running the following 2 commands:
+10. Once the connection is created, **upload it using the Orchestrate CLI** and then set the credentials by running the following 2 commands in the Terminal:
     ```bash
     orchestrate connections import -f zosmf_connection.yaml
     ```
@@ -83,18 +83,18 @@ First thing we need to do is create a **connection to the z/OSMF API** so your t
 
 ## Step 3 - Create Python Tools (Activity 2 of 3) 🐍
 
-In this section, you will create **5 Python tools** that leverage the **z/OSMF API** to interact with z/OS datasets and jobs. Each tool will be uploaded to watsonx Orchestrate using the **Orchestrate CLI**.
+In this section, you will create **5 Python tools** that leverage the **z/OSMF API** to interact with z/OS datasets and jobs. Each tool will be uploaded to watsonx Assistant for Z using the **Orchestrate CLI**.
 
 ### Tool 1: Read Dataset Tool 📖
 
-11. This tool reads the contents of a z/OS dataset. In IBM Bob, enter the prompt:
+11. This tool reads the contents of a z/OS dataset. In IBM Bob chat window, enter the prompt:
     ```
     Create a python tool in the watsonx Orchestrate ADK that reaches out to the zosmf api to read the contents of the dataset. The tool should return the contents/output of the dataset read api call. It should take in the dataset name as input. Use this link for context on the the zosmf api read dataset api syntax: https://www.ibm.com/docs/en/zos/2.5.0?topic=interface-retrieve-contents-zos-data-set-member. Use this link for context on how to make a python tool in the ADK: https://developer.watson-orchestrate.ibm.com/tools/create_tool. Make sure the tool has the decorators and input that the ADK needs to know to know about the tool: https://developer.watson-orchestrate.ibm.com/tools/create_tool. See the files operatorCommand.py and tsoCommand.py in the sample_files folder as reference and a template when making the read_dataset tool. Create a folder called tools and put this new tool in that folder.
     ```
 
-12. After creating the tool, upload it using the Orchestrate CLI:
+12. After creating the tool, upload it using the Orchestrate CLI in the Terminal:
     ```bash
-    orchestrate tools import -k python -f read_dataset.py -a zosmf
+    orchestrate tools import -k python -f tools/read_dataset.py --app-id zosmf
     ```
 
 ### Tool 2: Create Dataset Tool ➕
@@ -104,9 +104,9 @@ In this section, you will create **5 Python tools** that leverage the **z/OSMF A
     Create a python tool in the watsonx Orchestrate ADK that reaches out to the zosmf api to create a new dataset. The tool should take in the new dataset name as input. Use this link for context on the the zosmf api write dataset api syntax: https://www.ibm.com/docs/en/zos/2.5.0?topic=interface-create-sequential-partitioned-data-set. Use this link for context on how to make a python tool in the ADK: https://developer.watson-orchestrate.ibm.com/tools/create_tool. Make sure the tool has the decorators and input that the ADK needs to know to know about the tool: https://developer.watson-orchestrate.ibm.com/tools/create_tool. See the files operatorCommand.py and tsoCommand.py in the sample_files folder as reference and a template when making the create_dataset tool. Put this new tool in the tools/ folder
     ```
 
-14. After creating the tool, upload it using the Orchestrate CLI:
-    ```bash
-    orchestrate tools import -k python -f create_dataset.py -a zosmf
+14. After creating the tool, upload it using the Orchestrate CLI in the Terminal:
+    ```
+    orchestrate tools import -k python -f tools/create_dataset.py --app-id zosmf
     ```
 
 ### Tool 3: Write to Dataset Tool ✍️
@@ -117,8 +117,8 @@ In this section, you will create **5 Python tools** that leverage the **z/OSMF A
     ```
 
 16. After creating the tool, upload it using the Orchestrate CLI:
-    ```bash
-    orchestrate tools import -k python -f write_dataset.py -a zosmf
+    ```
+    orchestrate tools import -k python -f tools/write_dataset.py --app-id zosmf
     ```
 
 ### Tool 4: Submit Job Tool 🚀
@@ -129,8 +129,8 @@ In this section, you will create **5 Python tools** that leverage the **z/OSMF A
     ```
 
 18. After creating the tool, upload it using the Orchestrate CLI:
-    ```bash
-    orchestrate tools import -k python -f submit_job.py -a zosmf
+    ```
+    orchestrate tools import -k python -f tools/submit_job.py --app-id zosmf
     ```
 
 ### Tool 5: Get Job Status Tool 📊
@@ -141,8 +141,8 @@ In this section, you will create **5 Python tools** that leverage the **z/OSMF A
     ```
 
 20. After creating the tool, upload it using the Orchestrate CLI:
-    ```bash
-    orchestrate tools import -k python -f get_job_status.py -a zosmf
+    ```
+    orchestrate tools import -k python -f tools/get_job_status.py --app-id zosmf
     ```
 
 ---
@@ -171,8 +171,8 @@ Finally, you will create an **agent** that orchestrates the tools you created to
     15. If the user does not want to submit the job, ask the user if they want to make any more changes.
     ```
 
-22. After creating the agent, **upload it to watsonx Orchestrate using the Orchestrate CLI**:
-    ```bash
+22. After creating the agent, **upload it to watsonx Assistant for Z using the Orchestrate CLI**:
+    ```
     orchestrate agents import -f agent/skeleton_job_agent.yaml
     ```
 
@@ -185,7 +185,7 @@ You have successfully completed all three activities:
 - ✅ Created a connection to the z/OSMF API
 - ✅ Created an agent that orchestrates these tools
 
-All components have been uploaded to watsonx Orchestrate using the Orchestrate CLI. Your agent is now ready to help users run skeleton/template jobs with custom parameters!
+All components have been uploaded to watsonx Assistant for Z using the Orchestrate CLI. Your agent is now ready to help users run skeleton/template jobs with custom parameters!
 
 ---
 

@@ -27,7 +27,7 @@ def tsoCommand(tsoCmd: str) -> str:
     PASSWORD=conn.password
 
 
-    get_status_url = urljoin(base_url, f'tsoApp/v1/tso')
+    get_status_url = urljoin(base_url, f'zosmf/tsoApp/v1/tso')
     request_body = {
         "tsoCmd": tsoCmd
     }

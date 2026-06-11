@@ -27,7 +27,7 @@ def operatorCommand(cmd: str) -> str:
     PASSWORD=conn.password
 
 
-    get_status_url = urljoin(base_url, f'restconsoles/consoles/iserVS01')
+    get_status_url = urljoin(base_url, f'zosmf/restconsoles/consoles/iserVS01')
     request_body = {
         "cmd": cmd,
         "sol-key": "JES"
@@ -46,4 +46,10 @@ def operatorCommand(cmd: str) -> str:
     cmd_response=status_data['cmd-response'].replace('\r', '\n')
     print(cmd_response)
     return cmd_response
+
+def main():
+    print(operatorCommand("D A,L"))
+
+if __name__ == "__main__":
+    main()
 
