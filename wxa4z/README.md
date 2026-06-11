@@ -176,7 +176,7 @@ Finally, you will create an **agent** that orchestrates the tools you created to
     2. Use your tool that reads datasets to read the dataset that the user identified in the previous step.
     3. Output the dataset contents to the user in the chat window
     4. Ask the user what parameters they want to change
-    5. Tell the user that you will create a new dataset with the updated parameters. The new dataset name will be the same as the original dataset name with .NEW appended to it.
+    5. Tell the user that you will create a new dataset with the updated parameters. The new dataset name will be the same as the original dataset name with .NEW appended to it. If that dataset already exists, you will ask the user if they want to overwrite it or use a different dataset name.
     6. Use your tool that creates datasets to create a new dataset with the new dataset name.
     7. If successful, you will tell the user that the dataset has been created successfully and that you will now write the dataset content with the updated parameters.
     8. Use your tool that writes content to dataset to write the original dataset's contents with the updated parameters to the new dataset.
@@ -217,7 +217,7 @@ All components have been uploaded to watsonx Assistant for Z using the Orchestra
 
 26. You should see your agent tile! Click on the tile.
 
-27. Ask it to run a skeleton job. There is a job already on this z/OS system called `IBMUSER.JCL.SKELETON(JOB1)`. This job runs `LISTCAT ENTRIES('SYS1.PARMLIB') ALL`. You can use this as your initial testing to see if you can listcat different datasets.
+27. Ask it to run a skeleton job. There is a job already on this z/OS system called `IBMUSER.SKELETON.JCL`. This job runs `LISTCAT ENTRIES('SYS1.PARMLIB') ALL`. You can use this as your initial testing to see if you can listcat different datasets.
 
 ---
 
