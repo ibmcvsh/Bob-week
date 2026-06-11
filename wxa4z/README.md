@@ -60,7 +60,12 @@ First thing we need to do is create a **connection to the z/OSMF API** so your t
    Create a connection to the zosmf api using the watsonx Orchestrate ADK. Use the following link as reference: https://developer.watson-orchestrate.ibm.com/connections/build_connections. Use the connection.yaml file in the sample_files folder as a reference and template. You will use basic auth with Team credentials for both draft and live. The server url is https://52.118.209.149:10443/ . Create a folder called connections and put this new file in that folder.
    ```
 
-10. Once the connection is created, **upload it using the Orchestrate CLI** and then set the credentials by running the following 2 commands in the Terminal:
+   This will create a yaml file defining the connection to the system's z/OSMF API. Here is an exmaple of what the file will look like:
+   [connection.yaml](images/connection-example.png)
+
+   Your connection file may look slightly different. The important part is that the server URL is **https://52.118.209.149:10443/** as this points to the system's z/OSMF port. 
+
+10. Once the connection file is created, **upload it using the Orchestrate CLI** and then set the credentials by running the following 3 commands in the Terminal:
     ```bash
     orchestrate connections import -f zosmf_connection.yaml
     ```
@@ -91,6 +96,12 @@ In this section, you will create **5 Python tools** that leverage the **z/OSMF A
     ```
     Create a python tool in the watsonx Orchestrate ADK that reaches out to the zosmf api to read the contents of the dataset. The tool should return the contents/output of the dataset read api call. It should take in the dataset name as input. Use this link for context on the the zosmf api read dataset api syntax: https://www.ibm.com/docs/en/zos/2.5.0?topic=interface-retrieve-contents-zos-data-set-member. Use this link for context on how to make a python tool in the ADK: https://developer.watson-orchestrate.ibm.com/tools/create_tool. Make sure the tool has the decorators and input that the ADK needs to know to know about the tool: https://developer.watson-orchestrate.ibm.com/tools/create_tool. See the files operatorCommand.py and tsoCommand.py in the sample_files folder as reference and a template when making the read_dataset tool. Create a folder called tools and put this new tool in that folder.
     ```
+
+   This will create a python file that makes a z/OSMF API call to read a dataset name. Here is an exmaple of what the file will look like:
+   [read_dataset1](images/read_dataset1.png)
+   [read_dataset2](images/read_dataset2.png)
+
+   Your file may look slightly different, but the important parts having the **@tool** decorator at the top of the function, the dataset_url being **zosmf/restfiles/ds/{dataset_name}**, and the **dataset_name** being passed in as a parameter. This is the same pattern for the other 2 dataset tools so keep an eye out for these patterns.
 
 12. After creating the tool, upload it using the Orchestrate CLI in the Terminal:
     ```bash
@@ -128,6 +139,9 @@ In this section, you will create **5 Python tools** that leverage the **z/OSMF A
     Create a python tool in the watsonx Orchestrate ADK that reaches out to the zosmf api to submit a job. The tool should take in the dataset name of the job they want to submit as input. Use this link for context on the the zosmf api submit job api syntax: https://www.ibm.com/docs/en/zos/2.5.0?topic=interface-submit-job Use this link for context on how to make a python tool in the ADK: https://developer.watson-orchestrate.ibm.com/tools/create_tool. Make sure the tool has the decorators and input that the ADK needs to know to know about the tool: https://developer.watson-orchestrate.ibm.com/tools/create_tool. See the files operatorCommand.py and tsoCommand.py in the sample_files folder as reference and a template when making the submit_job tool. Put this new tool in the tools/ folder
     ```
 
+    This will create another python file in the tools folder. Your file should look similar to this, but does not need to be exactly the same. As long as there is the **@tool** decorator and the submit_url has **zosmf/restjobs/jobs/** at the end, your tool will be able to submit a job.
+    [submit_job](images/job_submit.png)
+
 18. After creating the tool, upload it using the Orchestrate CLI:
     ```
     orchestrate tools import -k python -f tools/submit_job.py --app-id zosmf
@@ -139,6 +153,10 @@ In this section, you will create **5 Python tools** that leverage the **z/OSMF A
     ```
     Create a python tool in the watsonx Orchestrate ADK that reaches out to the zosmf api to retrieve the status of the job. The tool should take in the job id of the job they want to retrieve the status of as input. Use this link for context on the the zosmf api job status api syntax: https://www.ibm.com/docs/en/zos/2.5.0?topic=interface-obtain-status-job. Note that the zosm api job status syntax requires both the job id and the job name as part of the url. Use this link for context on how to make a python tool in the ADK: https://developer.watson-orchestrate.ibm.com/tools/create_tool. Make sure the tool has the decorators and input that the ADK needs to know to know about the tool: https://developer.watson-orchestrate.ibm.com/tools/create_tool. See the files get_job_status.py in the sample_files folder as reference and a template when making the get_job_status tool. Put this new tool in the tools/ folder
     ```
+
+    [job_status](images/job_status.png)
+    This will create another python file in the tools folder. Your file should look similar to this, but does not need to be exactly the same. As long as there is the **@tool** decorator and the job_status_url has **zosmf/restjobs/jobs/{job_name}/{job_id}** at the end, your tool will be able to submit a job.
+
 
 20. After creating the tool, upload it using the Orchestrate CLI:
     ```
